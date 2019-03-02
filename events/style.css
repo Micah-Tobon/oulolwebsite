@@ -33,14 +33,7 @@ main {
   padding: 48px;
 }
 
-sidebar {
-  grid-area: sidebar;
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 3fr 1fr;
-  grid-template-areas: "logo menu avatar"
-                       "copyright menu avatar";
-}
+
 .logo {
   display: flex;
   align-items: center;
