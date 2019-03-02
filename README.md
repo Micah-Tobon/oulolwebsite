@@ -1,2 +1,2 @@
 # oulolwebsite
-Official website for the Ohio University League of Legends Website
+Official website for the Ohio University League of Legends Club
