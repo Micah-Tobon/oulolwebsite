@@ -1,56 +1,48 @@
-/**
- * ALL the UI design credit goes to:
- * https://www.sketchappsources.com/free-source/2676-calendar-template-sketch-freebie-resource.html
- */
-
 
 /* WRAPPER */
-.landing {
-  height: 100vh;
-}
-
-.logo {
-  padding: 1rem 0 0 0;
-  width: 7rem;
-  height: 7rem;
-  vertical-align: middle
-}
 
 .wrapper {
   display: grid;
   grid-template-rows: 70px 1fr 70px;
   grid-template-columns: 1fr;
-  grid-template-areas: "content";
-  width: 100vw; /* unnecessary, but let's keep things consistent */
+  grid-template-areas: "sidebar"
+                       "content";
+  padding-left: 100px;
+  width: 80vw; /* unnecessary, but let's keep things consistent */
   height: 100vh;
 }
 
 @media screen and (min-width: 850px) {
   .wrapper {
-    grid-template-columns: 200px 5fr;
+    grid-template-columns: 190px 4fr;
     grid-template-rows: 1fr;
     grid-template-areas: "sidebar content";
   }
 }
 
 
-
 /* SIDEBAR */
 
 main {
   grid-area: content;
-  padding: 30px;
+  padding: 50px;
 }
 
-
+sidebar {
+  grid-area: sidebar;
+  padding-right: 20px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas: "logo menu avatar"
+                       "copyright menu avatar";
+}
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.copyright {
-  text-align: center;
-}
+
 .avatar {
   grid-area: avatar;
   display: flex;
@@ -107,7 +99,10 @@ main {
     margin: 1em 0;
   }
   .avatar__img > img {
-    border-radius: 50%;
+    padding-left: 20px;
+    border-radius: 20%;
+    height:  120px;
+    width: 120px;
   }
 }
 
@@ -120,9 +115,11 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
-.calendar{}
+.calendar{
+  padding-left: 0px;
+}
 
 .calendar__week,
 .calendar__header {
@@ -141,7 +138,7 @@ main {
 }
 
 .calendar__day {
-  padding: 30px;
+  padding: 16px;
 }
 
 
@@ -159,10 +156,14 @@ body {
   color: #A8B2B9;
 }
 
+sidebar {
+  background-color: white;
+  box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.2);
+}
 
 main {
-  background-color: white;
-  opacity: 0.90;
+  background-color: #FCFBFC;
+  padding-left: 20px;
 }
 
 .avatar__name {
@@ -171,10 +172,10 @@ main {
 
 .menu__item {
   text-transform: uppercase;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
   font-weight: 500;
-  padding: 16px 16px 16px 14px;
-  border-left: 10px solid transparent;
+  padding: 10px 10px 10px 10px;
+  border-left: 4px solid transparent;
   color: inherit;
   text-decoration: none;
   transition: color ease 0.3s;
@@ -184,7 +185,7 @@ main {
   color: var(--red);
 }
 .menu__item--active .menu__text {
-  color: black;
+  color: var(--red);
 }
 
 .menu__item:hover {
