@@ -65,7 +65,8 @@
 .hidden{
   padding-top: 50px;
   font-size: 50px;
-  color: blue;
+  color: white;
+  text-shadow: 4px, 4px, black;
   text-align: center;
   visibility: hidden;
 }
@@ -73,7 +74,8 @@
 .unhidden{
   padding-top: 50px;
   font-size: 50px;
-  color: blue;
+  color: white;
+  text-shadow: 4px, 4px, black;
   text-align: center;
   visibility: visible;
 }
