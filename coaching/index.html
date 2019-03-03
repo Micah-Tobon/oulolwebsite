@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<script>
-var global_name;
-</script>
 <head>
   <title>Ohio University LOL</title>
 
@@ -128,7 +125,7 @@ var global_name;
 
 </form>
 <script>
-var tmp = global_name;
+var tmp = window.global_name;
 document.getElementById("snapchat_name").value = tmp;
 var $form = $('form#test-form'),
     url = 'https://script.google.com/macros/s/AKfycbwkHfuzXntDn4uIk7Vvyc4dVt7fvn-aMHosIXQFYB4liM4Mno87/exec'
@@ -182,7 +179,7 @@ window.snapKitInit = function () {
          }else{
            item.className = "wrapper";
          }
-         global_name = username;
+         window.global_name = username;
          });
    },
  });
