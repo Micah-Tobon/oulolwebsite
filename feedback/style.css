@@ -89,8 +89,6 @@
 }
 
 .midbox {
-  padding-bottom: : 50px;
-  padding-right: 200px;
   grid-column: 2 /  4  ;
   background-color: clear;
   color: #fff;
