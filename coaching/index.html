@@ -158,11 +158,11 @@ window.snapKitInit = function () {
        .then(data => {
          username=data.data.me.displayName;
          console.log(username);
-         var item = document.getElementById("test-form");
+         var item = document.getElementById("wrapper");
          if(username){
-           item.className = 'wrapper2' ;
+           item.className = "wrapper2" ;
          }else{
-           item.className = 'wrapper';
+           item.className = "wrapper";
          }
          });
    },
