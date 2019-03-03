@@ -53,6 +53,7 @@
 
 .box {
   background: rgba(0, 0, 0, 0 );
+  background: blue;
   color: #fff;
   border-radius: 5px;
   padding: 20px;
@@ -62,7 +63,7 @@
 }
 
 .Ebox {
-  background: clear;
+  background: blue;
   color: #fff;
   border-radius: 5px;
   padding: 20px;
@@ -71,7 +72,7 @@
 
 .midbox {
   grid-column: 2 /  4  ;
-  background-color: clear;
+  background-color: blue;
   color: #fff;
   border-radius: 5px;
   padding: 20px;
