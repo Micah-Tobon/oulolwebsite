@@ -78,7 +78,7 @@
 
 <form id="test-form">
 
-  <div class="wrapper" class="hidden">
+  <div class="wrapper">
 
     <div class="Ebox c"> <p></p></div>
     <div class="box a"><label>Discord Name</label></div>
@@ -160,7 +160,7 @@ window.snapKitInit = function () {
          console.log(username);
          var item = document.getElementById("test-form");
          if(username){
-           item.className = 'unhidden' ;
+           item.visibility = 'unhidden' ;
          }else{
            item.className = 'hidden';
          }
