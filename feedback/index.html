@@ -84,8 +84,8 @@ if (username) {
          .then(data => {
            username=data.data.me.displayName;
            console.log(username);
+           var item = document.getElementById("hidden");
            if(username){
-             var item = document.getElementById();
              item.className = 'unhidden' ;
              clickedButton.value = 'hide'
            }else{
