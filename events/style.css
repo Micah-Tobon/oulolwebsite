@@ -1,6 +1,8 @@
+#my-login-button-target{
+  visibility: hidden;
+}
 
 /* WRAPPER */
-
 .wrapper {
   display: grid;
   grid-template-rows: 70px 1fr 70px;
@@ -12,6 +14,7 @@
   height: 100vh;
   padding-bottom: 50px;
 }
+
 
 @media screen and (min-width: 850px) {
   .wrapper {

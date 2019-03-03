@@ -9,9 +9,6 @@
   height: 7rem;
   vertical-align: middle
 }
-#my-login-button-target{
-  visibility: hidden;
-}
 
 @media (min-width: 576px) {}
 

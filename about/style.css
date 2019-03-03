@@ -7,6 +7,9 @@ body{
   height: 10vh;
 }
 
+#my-login-button-target{
+  visibility: hidden;
+}
 .wrapper {
   display: grid;
   grid-template-columns: 25% 25% 24% 22% ;
