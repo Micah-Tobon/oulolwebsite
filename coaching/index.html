@@ -149,11 +149,11 @@ $('#submit-form').on('click', function(e) {
 function unhide(clickedButton, divID) {
 var item = document.getElementById(divID);
 if (item) {
-    if(item.children[0].className=='wrapper2'){
-        item.children[0].className = 'wrapper' ;
+    if(item.children[0].className=="wrapper2"){
+        item.children[0].className = "wrapper" ;
         clickedButton.value = 'done'
     }else{
-        item.children[0].className = 'wrapper2';
+        item.children[0].className = "wrapper2";
         clickedButton.value = 'ithink'
     }
 }}
