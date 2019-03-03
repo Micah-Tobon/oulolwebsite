@@ -57,7 +57,7 @@
   color: #fff;
   border-radius: 5px;
   padding: 20px;
-  font-size: 75 %;
+  font-size: 100 %;
   text-shadow: 4px 4px #000000;
 
 }
@@ -90,7 +90,7 @@
 
 .midbox {
   padding-bottom: : 50px;
-  padding-right: 45px;
+  padding-right: 80px;
   grid-column: 2 /  4  ;
   background-color: clear;
   color: #fff;
