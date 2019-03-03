@@ -85,7 +85,11 @@ if (username) {
            username=data.data.me.displayName;
            console.log(username);
            if(username){
-             check=true;
+             item.className = 'unhidden' ;
+             clickedButton.value = 'hide'
+           }else{
+             item.className = 'hidden';
+             clickedButton.value = 'unhide'
            }
          });
 
