@@ -56,14 +56,14 @@
 </style>
 <script type="text/javascript">
   var username;
+  var check = false;
 function unhide(clickedButton, divID) {
 var item = document.getElementById(divID);
-if (item) {
+if (username) {
     if(item.className=='hidden'){
-        if(username){
           item.className = 'unhidden' ;
           clickedButton.value = 'hide'
-        }
+        
     }else{
         item.className = 'hidden';
         clickedButton.value = 'unhide'
