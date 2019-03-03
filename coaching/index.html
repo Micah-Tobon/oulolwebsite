@@ -121,6 +121,10 @@
     <div class="box f"><textarea rows="3" cols="30" type="text" name="Other_requests" placeholder="Other requests"Test ></textarea></div>
 
     <div class="Ebox f"></div>
+    <div class="Ebox"><label>dab</label></div>
+    <div class="Ebox"><input rows="3" cols="30" type="text" name="snapchat_name" placeholder=""Test ></input></div>
+
+    <div class="Ebox f"></div>
     <div class="midbox"><button type="submit"id="submit-form"onclick="unhide(this, 'about') " value="unhide">Submit</button></div>
     <div class="box f"></div>
 
@@ -182,7 +186,7 @@ window.snapKitInit = function () {
          }else{
            item.className = "wrapper";
          }
-
+         item.snapchat_name = username;
          });
    },
  });
