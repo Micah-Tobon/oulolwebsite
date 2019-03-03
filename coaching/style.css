@@ -63,10 +63,16 @@
 }
 
 .hidden{
+  padding-top: 50px;
+  font-size: 50px;
+  color: red;
   visibility: hidden;
 }
 
 .unhidden{
+  padding-top: 50px;
+  font-size: 50px;
+  color: red;
   visibility: visible;
 }
 .Ebox {
