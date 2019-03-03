@@ -76,9 +76,9 @@
 </form> -->
 
 
-<form id="test-form">
+<form id="test-form" class="wrapper">
 
-  <div class="wrapper">
+  <div>
 
     <div class="Ebox c"> <p></p></div>
     <div class="box a"><label>Discord Name</label></div>
@@ -159,7 +159,6 @@ window.snapKitInit = function () {
          username=data.data.me.displayName;
          console.log(username);
          var item = document.getElementById("test-form");
-         debugger;
          if(username){
            item.className = "wrapper2" ;
          }else{
