@@ -8,13 +8,14 @@
   grid-template-areas: "sidebar"
                        "content";
   padding-left: 100px;
-  width: 80vw; /* unnecessary, but let's keep things consistent */
+  width: 82vw; /* unnecessary, but let's keep things consistent */
   height: 100vh;
+  padding-bottom: 50px;
 }
 
 @media screen and (min-width: 850px) {
   .wrapper {
-    grid-template-columns: 190px 4fr;
+    grid-template-columns: 10px 5fr;
     grid-template-rows: 1fr;
     grid-template-areas: "sidebar content";
   }
@@ -30,10 +31,10 @@ main {
 
 sidebar {
   grid-area: sidebar;
-  padding-right: 20px;
+  padding-right: 150px;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 3fr 2fr;
   grid-template-areas: "logo menu avatar"
                        "copyright menu avatar";
 }
@@ -58,9 +59,6 @@ sidebar {
   display: block;
 }
 
-.copyright {
-  grid-area: copyright;
-}
 .menu {
   grid-area: menu;
   display: flex;
@@ -99,15 +97,12 @@ sidebar {
     margin: 1em 0;
   }
   .avatar__img > img {
-    padding-left: 20px;
+    padding-left: 15px;
     border-radius: 20%;
     height:  120px;
     width: 120px;
   }
 }
-
-
-
 
 /* MAIN */
 
@@ -138,7 +133,7 @@ sidebar {
 }
 
 .calendar__day {
-  padding: 16px;
+  padding: 5px;
 }
 
 
@@ -163,7 +158,8 @@ sidebar {
 
 main {
   background-color: #FCFBFC;
-  padding-left: 20px;
+  padding-left: 150px;
+  padding-right: 10px;
 }
 
 .avatar__name {
@@ -178,7 +174,7 @@ main {
   border-left: 4px solid transparent;
   color: inherit;
   text-decoration: none;
-  transition: color ease 0.3s;
+  transition: color ease 0.9s;
 }
 
 .menu__item--active .menu__icon {
@@ -208,10 +204,7 @@ main {
   }
 }
 
-.copyright {
-  font-size: 0.7rem;
-  font-weight: 400;
-}
+
 
 .calendar {
   background-color: white;
@@ -225,12 +218,19 @@ main {
 }
 
 .calendar__day {
+  font-size: 0.5em;
   border-right: 1px solid #e1e1e1;
   border-top: 1px solid #e1e1e1;
 }
-
+.calendar__day__text{
+  font-size: 15px;
+  color: red;
+  font-weight: bold;
+  font-style: oblique;
+  text-align: left;
+}
 .calendar__day:last-child {
-  border-right: 0;
+  border-right: 10;
 }
 
 .toggle{
