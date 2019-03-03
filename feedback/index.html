@@ -84,8 +84,9 @@ if (item) {
        snap.loginkit.fetchUserInfo()
          .then(data => {
            username=data.me.displayName;
-           console.log(username);
            console.log('User info:', data)
+           console.log(username);
+
          });
 
      },
