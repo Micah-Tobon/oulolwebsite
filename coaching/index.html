@@ -45,7 +45,7 @@
     </a>
   </div>
   <div id="my-login-button-target"></div>
-  <div class = "hidden"><text> CHECK IF THIS WORKS</text></div>
+  <div id="hidden" class = "hidden"><text> CHECK IF THIS WORKS</text></div>
 
 
 
@@ -121,12 +121,13 @@ $('#submit-form').on('click', function(e) {
 <script>
 function unhide(clickedButton, divID) {
 var item = document.getElementById("test-form");
+var item2 = document.getElementById("hidden");
 if (item) {
     if(item.children[0].className=="wrapper2"){
         item.children[0].className = "wrapper" ;
         clickedButton.value = 'done'
-        if(item.className == "hidden"){
-          item.className = "unhidden"
+        if(item2.className == 'hidden'){
+          item2.className = 'unhidden'
         }
     }else{
         item.children[0].className = "wrapper2";
