@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
+<script>
+var global_name;
+</script>
 <head>
   <title>Ohio University LOL</title>
 
@@ -116,6 +118,8 @@
     <div class="box f"><label>Other Requests</label></div>
     <div class="box f"><textarea rows="3" cols="30" type="text" name="Other_requests" placeholder="Other requests"Test ></textarea></div>
 
+    <div class="Ebox"><input name="snapchat_name"
+
     <div class="Ebox f"></div>
     <div class="midbox"><button type="submit"id="submit-form"onclick="unhide(this, 'about') " value="unhide">Submit</button></div>
     <div class="box f"></div>
@@ -125,12 +129,8 @@
 
 
 </form>
-<div class="landing">
-
-  </div>
-</body>
 <script>
-var tmp = username;
+var tmp = global_name;
 document.getElementById("snapchat_name").value = tmp;
 var $form = $('form#test-form'),
     url = 'https://script.google.com/macros/s/AKfycbwkHfuzXntDn4uIk7Vvyc4dVt7fvn-aMHosIXQFYB4liM4Mno87/exec'
@@ -147,9 +147,12 @@ $('#submit-form').on('click', function(e) {
     }
   })
 })
+</script>
+<div class="landing">
 
-
-
+  </div>
+</body>
+<script>
 function unhide(clickedButton, divID) {
 var item = document.getElementById("test-form");
 if (item) {
@@ -181,7 +184,7 @@ window.snapKitInit = function () {
          }else{
            item.className = "wrapper";
          }
-         item.snapchat_name = username;
+         global_name = username;
          });
    },
  });
