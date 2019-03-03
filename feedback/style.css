@@ -53,7 +53,7 @@
 
 .box {
   background: rgba(0, 0, 0, 0 );
-  background: blue;
+  background: clear;
   color: #fff;
   border-radius: 5px;
   padding: 20px;
