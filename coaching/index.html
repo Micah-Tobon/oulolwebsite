@@ -74,7 +74,9 @@
       <br></br>
 <input type="submit" value="Submit">
 </form> -->
-<form id="test-form">
+
+
+<form id="test-form" class="hidden">
 
   <div class="wrapper">
 
@@ -153,7 +155,15 @@ window.snapKitInit = function () {
    ],
    handleResponseCallback: function() {
      snap.loginkit.fetchUserInfo()
-       .then(data => console.log('User info:', data));
+       .then(data => {
+         username=data.data.me.displayName;
+         console.log(username);
+         var item = document.getElementById("test-form");
+         if(username){
+           item.className = 'unhidden' ;
+         }else{
+           item.className = 'hidden';
+         });
    },
  });
 };
