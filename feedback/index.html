@@ -39,24 +39,97 @@
       <div class="navitem discord">Join the Discord</div>
     </a>
   </div>
+  <div id="my-login-button-target"></div>
+  <div id="hidden" class = "hidden"><text>You have successfully signed up for coaching. Thank you!</text></div>
 
-  <div class="landing">
-    <div id="my-login-button-target"></div>
+
+
+  <form id="test-form">
+
+
+  <div class= "wrapper">
+
+
+    <div class="Ebox c"> <p><input id="snapchat_name" name="snapchat_name" type="text" value=""/></p></div>
+    <div class="box a"><label>Discord Name</label></div>
+    <div class="box b"><input type="text" name="Discord_name" placeholder="Discord Name"/></div>
+
+    <div class="Ebox c"></div>
+    <div class="box d"><label>Role</label></div>
+    <div class="box e"><input type="text" name="Role" placeholder="Role"/></div>
+
+    <div class="Ebox f"></div>
+    <div class="box f">Day</div>
+    <div class="box f">Time</div>
+
+    <div class="Ebox f"></div>
+    <div class="box f"><input type="text" name="Day1" placeholder="Preferred Day"/></div>
+    <div class="box f"><input type="text" name="Time1" placeholder="Preferred Time"/></div>
+
+    <div class="Ebox f"></div>
+    <div class="box f"><input type="text" name="Day2" placeholder="Alternate (if applicable)"/></div>
+    <div class="box f"><input type="text" name="Time2" placeholder="Alternate (if applicable)"/></div>
+
+    <div class="Ebox f"></div>
+    <div class="box f"><input type="text" name="Day3" placeholder="Alternate (if applicable)"/></div>
+    <div class="box f"><input type="text" name="Time3" placeholder="Alternate (if applicable)"/></div>
+
+    <div class="Ebox f"></div>
+    <div class="box f"><label>Rank</label></div>
+    <div class="box f"><input type="text" name="Rank" placeholder="Rank"/></div>
+
+    <div class="Ebox f"></div>
+    <div class="box f"><label>Other Requests</label></div>
+    <div class="box f"><textarea rows="3" cols="30" type="text" name="Other_requests" placeholder="Other requests"Test ></textarea></div>
+
+    <div class="Ebox f"></div>
+    <div class="midbox"><button type="submit"id="submit-form"onclick="unhide(this, 'about') " value="unhide">Submit</button></div>
+    <div class="box f"></div>
+
+
   </div>
-</body>
 
-<style>
-.hidden{
-    display:none;
-}
 
-.unhidden{
-    display:block;
-}
-</style>
-<script type="text/javascript">
-  var username;
+  </form>
 
+
+  <script>
+  var $form = $('form#test-form'),
+      url = 'https://script.google.com/macros/s/AKfycbwkHfuzXntDn4uIk7Vvyc4dVt7fvn-aMHosIXQFYB4liM4Mno87/exec'
+
+  $('#submit-form').on('click', function(e) {
+    e.preventDefault();
+    var jqxhr = $.ajax({
+      url: url,
+      method: "GET",
+      dataType: "json",
+      data: $form.serializeObject(),
+      success: function (data) {
+        console.log(data)
+      }
+    })
+  })
+  </script>
+  <div class="landing">
+
+    </div>
+  </body>
+  <script>
+  function unhide(clickedButton, divID) {
+  var item = document.getElementById("test-form");
+  var item2 = document.getElementById("hidden");
+  if (item) {
+      if(item.children[0].className=="wrapper2"){
+          item.children[0].className = "wrapper" ;
+          clickedButton.value = 'done'
+          if(item2.className == 'hidden'){
+            item2.className = 'unhidden'
+          }
+      }else{
+          item.children[0].className = "wrapper2";
+          clickedButton.value = 'done'
+      }
+  }}
   window.snapKitInit = function () {
    var loginButtonIconId = 'my-login-button-target';
    // Mount Login Button
@@ -71,37 +144,27 @@
          .then(data => {
            username=data.data.me.displayName;
            console.log(username);
-           var item = document.getElementById("about");
+           var item = document.getElementById("test-form");
            if(username){
-             item.className = 'unhidden' ;
+             item.children[0].className = "wrapper2" ;
            }else{
-             item.className = 'hidden';
+             item.className = "wrapper";
            }
-         });
-
+           window.global_name = username;
+           document.getElementById("snapchat_name").value = username;
+           });
      },
    });
- };
+  };
 
- // Load the SDK asynchronously
- (function (d, s, id) {
+  // Load the SDK asynchronously
+  (function (d, s, id) {
    var js, sjs = d.getElementsByTagName(s)[0];
    if (d.getElementById(id)) return;
    js = d.createElement(s); js.id = id;
    js.src = "https://sdk.snapkit.com/js/v1/login.js";
    sjs.parentNode.insertBefore(js, sjs);
- }(document, 'script', 'loginkit-sdk'));
- </script>
+  }(document, 'script', 'loginkit-sdk'));
+  </script>
 
-<body>
-<div id="about" class="hidden">
-<div class="content3">
-<p>This is the about section.</p>
-<p>It is currently still being worked on.</p>
-</div>
-</div>
-<input type="button" onclick="unhide(this, 'about') " value="unhide">
-</body>
-
-
-</html>
+  </html>
