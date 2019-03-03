@@ -56,19 +56,6 @@
 </style>
 <script type="text/javascript">
   var username;
-  var check = false;
-function unhide(check=true) {
-var item = document.getElementById(divID);
-if (username) {
-          item.className = 'unhidden' ;
-          clickedButton.value = 'hide'
-
-    }else{
-        item.className = 'hidden';
-        clickedButton.value = 'unhide'
-    }
-}
-
 
   window.snapKitInit = function () {
    var loginButtonIconId = 'my-login-button-target';
@@ -87,10 +74,8 @@ if (username) {
            var item = document.getElementById("about");
            if(username){
              item.className = 'unhidden' ;
-             clickedButton.value = 'hide'
            }else{
              item.className = 'hidden';
-             clickedButton.value = 'unhide'
            }
          });
 
