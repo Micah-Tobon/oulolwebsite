@@ -116,9 +116,8 @@
     <div class="box f"><textarea rows="3" cols="30" type="text" name="Other_requests" placeholder="Other requests"Test ></textarea></div>
 
     <div class="Ebox f"></div>
-    <div class="midbox"><button type="submit"id="submit-form">Submit</button></div>
+    <div class="midbox"><button type="submit"id="submit-form"onclick="unhide(this, 'about') " value="unhide">Submit</button></div>
     <div class="box f"></div>
-
 
 
   </div>
@@ -147,6 +146,17 @@ $('#submit-form').on('click', function(e) {
   </div>
 </body>
 <script>
+function unhide(clickedButton, divID) {
+var item = document.getElementById(divID);
+if (item) {
+    if(item.className=='wrapper2'){
+        item.className = 'wrapper' ;
+        clickedButton.value = 'done'
+    }else{
+        item.className = 'wrapper2';
+        clickedButton.value = 'ithink'
+    }
+}}
 window.snapKitInit = function () {
  var loginButtonIconId = 'my-login-button-target';
  // Mount Login Button
@@ -167,6 +177,7 @@ window.snapKitInit = function () {
          }else{
            item.className = "wrapper";
          }
+
          });
    },
  });
