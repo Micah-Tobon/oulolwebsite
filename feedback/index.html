@@ -57,7 +57,7 @@
 <script type="text/javascript">
   var username;
   var check = false;
-function unhide(clickedButton, divID) {
+function unhide(check=true) {
 var item = document.getElementById(divID);
 if (username) {
           item.className = 'unhidden' ;
@@ -84,7 +84,9 @@ if (username) {
          .then(data => {
            username=data.data.me.displayName;
            console.log(username);
-
+           if(username){
+             check=true;
+           }
          });
 
      },
