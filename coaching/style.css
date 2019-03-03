@@ -64,6 +64,7 @@
 
 .Ebox {
   background: clear;
+  visibility: hidden;
   color: #fff;
   border-radius: 5px;
   padding: 20px;
