@@ -6,6 +6,9 @@
   max-height: 50000px;
 }
 
+#Day{
+  padding-right: 95px;
+}
 .comments{
   width: 350px;
   height: 50px;
@@ -13,6 +16,7 @@
 }
 .text{
   text-align: justify;
+  padding-top: 25px;
 }
 .first_name{
   font-size: 50px;
