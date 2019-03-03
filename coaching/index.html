@@ -83,10 +83,6 @@
 
     <input id="snapchat_name" type="text" value=""/>
 
-    <script>
-    var tmp = username;
-    document.getElementById("snapchat_name").value = tmp;
-    </script>
 
     <div class="Ebox c"> <p></p></div>
     <div class="box a"><label>Discord Name</label></div>
@@ -121,10 +117,6 @@
     <div class="box f"><textarea rows="3" cols="30" type="text" name="Other_requests" placeholder="Other requests"Test ></textarea></div>
 
     <div class="Ebox f"></div>
-    <div class="Ebox"><label>dab</label></div>
-    <div class="Ebox"><input rows="3" cols="30" type="text" name="snapchat_name" placeholder=""Test ></input></div>
-
-    <div class="Ebox f"></div>
     <div class="midbox"><button type="submit"id="submit-form"onclick="unhide(this, 'about') " value="unhide">Submit</button></div>
     <div class="box f"></div>
 
@@ -134,6 +126,8 @@
 
 </form>
 <script>
+var tmp = username;
+document.getElementById("snapchat_name").value = tmp;
 var $form = $('form#test-form'),
     url = 'https://script.google.com/macros/s/AKfycbwkHfuzXntDn4uIk7Vvyc4dVt7fvn-aMHosIXQFYB4liM4Mno87/exec'
 
