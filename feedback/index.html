@@ -82,9 +82,12 @@ if (item) {
      ],
      handleResponseCallback: function() {
        snap.loginkit.fetchUserInfo()
-         .then(data => console.log('User info:', data));
-         username=data.me.displayName;
-         console.log(username);
+         .then(data => {
+           username=data.me.displayName;
+           console.log(username);
+           console.log('User info:', data)
+         });
+
      },
    });
  };
