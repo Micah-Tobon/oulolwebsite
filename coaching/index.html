@@ -125,6 +125,9 @@ if (item) {
     if(item.children[0].className=="wrapper2"){
         item.children[0].className = "wrapper" ;
         clickedButton.value = 'done'
+        if(item.className == "hidden"){
+          item.className = "unhidden"
+        }
     }else{
         item.children[0].className = "wrapper2";
         clickedButton.value = 'done'
